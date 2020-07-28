@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>oneflow.config &mdash; OneFlow  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="oneflow.train" href="train.html" />
+    <link rel="prev" title="oneflow.env" href="env.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> OneFlow
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OneFlow Python API</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="oneflow.html">oneflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="env.html">oneflow.env</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">oneflow.config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="train.html">oneflow.train</a></li>
+<li class="toctree-l1"><a class="reference internal" href="losses.html">oneflow.losses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math.html">oneflow.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nn.html">oneflow.nn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="layers.html">oneflow.layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">oneflow.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distribute.html">oneflow.distribute</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OneFlow</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>oneflow.config</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/config.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-oneflow.config">
+<span id="oneflow-config"></span><h1>oneflow.config<a class="headerlink" href="#module-oneflow.config" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="oneflow.config.collect_act_event">
+<code class="sig-prename descclassname">oneflow.config.</code><code class="sig-name descname">collect_act_event</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#oneflow.config.collect_act_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not collect active event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>bool</em><em>, </em><em>optional</em>) – True or False. Defaults to True.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.config.comm_net_worker_num">
+<code class="sig-prename descclassname">oneflow.config.</code><code class="sig-name descname">comm_net_worker_num</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#oneflow.config.comm_net_worker_num" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Set up the workers number in epoll  mode network,</dt><dd><p>If use RDMA mode network, then doesn’t need.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>int</em>) – number of workers</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.config.compute_thread_pool_size">
+<code class="sig-prename descclassname">oneflow.config.</code><code class="sig-name descname">compute_thread_pool_size</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#oneflow.config.compute_thread_pool_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up the size of compute thread pool</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>int</em>) – size of  thread pool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.config.cpu_device_num">
+<code class="sig-prename descclassname">oneflow.config.</code><code class="sig-name descname">cpu_device_num</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#oneflow.config.cpu_device_num" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set number of CPUs on each machine to run oneflow on. Usually you don’t need to set this.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>int</em>) – number of CPUs. It is identical on every machine.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.config.enable_debug_mode">
+<code class="sig-prename descclassname">oneflow.config.</code><code class="sig-name descname">enable_debug_mode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">bool</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#oneflow.config.enable_debug_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether use debug mode or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>bool</em>) – True or False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.config.enable_model_io_v2">
+<code class="sig-prename descclassname">oneflow.config.</code><code class="sig-name descname">enable_model_io_v2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#oneflow.config.enable_model_io_v2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not use version2  of model input/output function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>[</em><em>type</em><em>]</em>) – True or False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.config.enable_numa_aware_cuda_malloc_host">
+<code class="sig-prename descclassname">oneflow.config.</code><code class="sig-name descname">enable_numa_aware_cuda_malloc_host</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#oneflow.config.enable_numa_aware_cuda_malloc_host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not let numa know  that  cuda allocated host’s memory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>bool</em><em>, </em><em>optional</em>) – True or False. Defaults to True.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.config.gpu_device_num">
+<code class="sig-prename descclassname">oneflow.config.</code><code class="sig-name descname">gpu_device_num</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#oneflow.config.gpu_device_num" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set number of GPUs on each machine to run oneflow on.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>val</strong> (<em>int</em>) – number of GPUs. It is identical on every machine. In other words,</p></li>
+<li><p><strong>can't specify different number of GPUs you would like to use on each machine.</strong> (<em>you</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.config.load_library">
+<code class="sig-prename descclassname">oneflow.config.</code><code class="sig-name descname">load_library</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#oneflow.config.load_library" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load necessary library for job</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>str</em>) – [description]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.config.machine_num">
+<code class="sig-prename descclassname">oneflow.config.</code><code class="sig-name descname">machine_num</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#oneflow.config.machine_num" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set available number of machine/node for  running job .</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>int</em>) – available number of machines</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.config.max_mdsave_worker_num">
+<code class="sig-prename descclassname">oneflow.config.</code><code class="sig-name descname">max_mdsave_worker_num</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#oneflow.config.max_mdsave_worker_num" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up max number of workers for mdsave process.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>int</em>) – max number of workers</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.config.persistence_buf_byte">
+<code class="sig-prename descclassname">oneflow.config.</code><code class="sig-name descname">persistence_buf_byte</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#oneflow.config.persistence_buf_byte" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up buffer size for persistence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>int</em>) – e.g. 1024(bytes)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.config.rdma_mem_block_mbyte">
+<code class="sig-prename descclassname">oneflow.config.</code><code class="sig-name descname">rdma_mem_block_mbyte</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#oneflow.config.rdma_mem_block_mbyte" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up the memory block size in rdma mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>int</em>) – size of block, e.g. 1024(mb)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.config.rdma_recv_msg_buf_mbyte">
+<code class="sig-prename descclassname">oneflow.config.</code><code class="sig-name descname">rdma_recv_msg_buf_mbyte</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#oneflow.config.rdma_recv_msg_buf_mbyte" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up the buffer size for receiving messages in rama mode</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>int</em>) – buffer size, e.g. 1024(mb)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.config.reserved_device_mem_mbyte">
+<code class="sig-prename descclassname">oneflow.config.</code><code class="sig-name descname">reserved_device_mem_mbyte</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#oneflow.config.reserved_device_mem_mbyte" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up the memory size of reserved device</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>int</em>) – memory size, e.g. 1024(mb)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.config.reserved_host_mem_mbyte">
+<code class="sig-prename descclassname">oneflow.config.</code><code class="sig-name descname">reserved_host_mem_mbyte</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#oneflow.config.reserved_host_mem_mbyte" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up the memory size of reserved host</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>int</em>) – memory size, e.g. 1024(mb)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.config.save_downloaded_file_to_local_fs">
+<code class="sig-prename descclassname">oneflow.config.</code><code class="sig-name descname">save_downloaded_file_to_local_fs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#oneflow.config.save_downloaded_file_to_local_fs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not save downloaded file to local file system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>bool</em><em>, </em><em>optional</em>) – True or False. Defaults to True.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.config.thread_enable_local_message_queue">
+<code class="sig-prename descclassname">oneflow.config.</code><code class="sig-name descname">thread_enable_local_message_queue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">bool</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#oneflow.config.thread_enable_local_message_queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not enable thread using local  message queue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>bool</em>) – True or False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.config.use_rdma">
+<code class="sig-prename descclassname">oneflow.config.</code><code class="sig-name descname">use_rdma</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#oneflow.config.use_rdma" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Whether use RDMA to speed up data transmission in cluster nodes or not.</dt><dd><p>if not, then use normal epoll mode.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>bool</em><em>, </em><em>optional</em>) – Defaults to True.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="train.html" class="btn btn-neutral float-right" title="oneflow.train" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="env.html" class="btn btn-neutral float-left" title="oneflow.env" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, OneFlow
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

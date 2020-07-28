@@ -1,0 +1,692 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>oneflow.math &mdash; OneFlow  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="oneflow.nn" href="nn.html" />
+    <link rel="prev" title="oneflow.losses" href="losses.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> OneFlow
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OneFlow Python API</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="oneflow.html">oneflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="env.html">oneflow.env</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">oneflow.config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="train.html">oneflow.train</a></li>
+<li class="toctree-l1"><a class="reference internal" href="losses.html">oneflow.losses</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">oneflow.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nn.html">oneflow.nn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="layers.html">oneflow.layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">oneflow.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distribute.html">oneflow.distribute</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OneFlow</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>oneflow.math</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/math.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-oneflow.math">
+<span id="oneflow-math"></span><h1>oneflow.math<a class="headerlink" href="#module-oneflow.math" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="oneflow.math.abs">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">abs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.abs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.acos">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">acos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.acos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.acosh">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">acosh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.acosh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.add">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>float<span class="p">, </span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>float<span class="p">, </span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.add" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.add_n">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">add_n</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">Sequence<span class="p">[</span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.add_n" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.argmax">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">argmax</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.argmax" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.asin">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">asin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.asin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.asinh">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">asinh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.asinh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.atan">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">atan</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.atan" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.atan2">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">atan2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.atan2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.atanh">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">atanh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.atanh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.broadcast_to_compatible_with">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">broadcast_to_compatible_with</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">compatible</span><span class="p">:</span> <span class="n">Sequence<span class="p">[</span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.broadcast_to_compatible_with" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.ceil">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">ceil</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.ceil" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.clip_by_value">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">clip_by_value</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">values</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">min_value</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>int<span class="p">, </span>float<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_value</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>int<span class="p">, </span>float<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.clip_by_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.cos">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">cos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.cos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.cosh">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">cosh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.cosh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.divide">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">divide</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>float<span class="p">, </span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>float<span class="p">, </span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.divide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.equal">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">equal</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.equal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.erf">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">erf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.erf" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.erfc">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">erfc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.erfc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.exp">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">exp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.exp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.expm1">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">expm1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.expm1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.floor">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">floor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.floor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.floordiv">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">floordiv</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.floordiv" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.gelu">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">gelu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.gelu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gaussian Error Linear Units.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – Input <cite>Blob</cite>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>Blob</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.gelu_grad">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">gelu_grad</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">dy</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.gelu_grad" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.greater">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">greater</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.greater" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.greater_equal">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">greater_equal</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.greater_equal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.l2_normalize">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">l2_normalize</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">epsilon</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">1e-12</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.l2_normalize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.less">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">less</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.less" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.less_equal">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">less_equal</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.less_equal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.lgamma">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">lgamma</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.lgamma" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.log">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">log</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.log" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.log1p">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">log1p</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.log1p" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.log_sigmoid">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">log_sigmoid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.log_sigmoid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.logical_and">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">logical_and</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.logical_and" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.maximum">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">maximum</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.maximum" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.minimum">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">minimum</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.minimum" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.mod">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">mod</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>float<span class="p">, </span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>float<span class="p">, </span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.mod" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.multiply">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">multiply</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>float<span class="p">, </span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>float<span class="p">, </span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.multiply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.negative">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">negative</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.negative" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.not_equal">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">not_equal</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.not_equal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.pow">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">pow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.pow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.reciprocal">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">reciprocal</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.reciprocal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.reciprocal_no_nan">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">reciprocal_no_nan</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.reciprocal_no_nan" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.reduce_all">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">reduce_all</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepdims</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.reduce_all" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.reduce_any">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">reduce_any</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepdims</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.reduce_any" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.reduce_euclidean_norm">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">reduce_euclidean_norm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepdims</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.reduce_euclidean_norm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.reduce_logsumexp">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">reduce_logsumexp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepdims</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.reduce_logsumexp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.reduce_max">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">reduce_max</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepdims</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.reduce_max" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.reduce_mean">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">reduce_mean</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_blob</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>collections.abc.Sized<span class="p">, </span>int<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepdims</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.reduce_mean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.reduce_min">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">reduce_min</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepdims</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.reduce_min" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.reduce_prod">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">reduce_prod</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepdims</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.reduce_prod" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.reduce_std">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">reduce_std</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepdims</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.reduce_std" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.reduce_sum">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">reduce_sum</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepdims</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.reduce_sum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the sum of elements across dimensions of a tensor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_tensor</strong> – A <cite>Blob</cite>.</p></li>
+<li><p><strong>axis</strong> – The dimensions to reduce. If None (by default), reduces all dimensions.
+Must be a int or a list/tuple of int which must be in the range
+[-len(input_tensor.shape), len(input_tensor.shape))</p></li>
+<li><p><strong>keepdims</strong> – If true, reduced dimensions will be kept with length 1.</p></li>
+<li><p><strong>name</strong> – A name for the operator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>Blob</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.reduce_variance">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">reduce_variance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepdims</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.reduce_variance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.reduced_shape_elem_cnt">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">reduced_shape_elem_cnt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_blob</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dtype</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>oneflow.python.framework.dtype.dtype<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.reduced_shape_elem_cnt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.relu">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">relu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.relu" title="Permalink to this definition">¶</a></dt>
+<dd><p>ReLU activation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – Input <cite>Blob</cite>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>Blob</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.rint">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">rint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.rint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.round">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">round</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.round" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.rsqrt">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">rsqrt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.rsqrt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.sigmoid">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">sigmoid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.sigmoid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes sigmoid of <cite>x</cite> element-wise.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – Input <cite>Blob</cite>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>Blob</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.sigmoid_v2">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">sigmoid_v2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.sigmoid_v2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.sign">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">sign</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.sign" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.sin">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">sin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.sin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.sinh">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">sinh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.sinh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.softplus">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">softplus</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.softplus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.sqrt">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">sqrt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.sqrt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.square">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">square</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.square" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.squared_difference">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">squared_difference</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>float<span class="p">, </span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>float<span class="p">, </span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.squared_difference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.subtract">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">subtract</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>float<span class="p">, </span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>float<span class="p">, </span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.subtract" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.tan">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">tan</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.tan" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.tanh">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">tanh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.tanh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes hyperbolic tangent of <cite>x</cite> element-wise.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – Input <cite>Blob</cite>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>Blob</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.tanh_grad">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">tanh_grad</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">dy</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.tanh_grad" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.tanh_v2">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">tanh_v2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.tanh_v2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.top_k">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">top_k</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">k</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">sorted</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.top_k" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.two_stage_reduce_max">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">two_stage_reduce_max</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepdims</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.two_stage_reduce_max" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.two_stage_reduce_min">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">two_stage_reduce_min</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keepdims</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.two_stage_reduce_min" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.unsorted_batch_segment_sum">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">unsorted_batch_segment_sum</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">segment_ids</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">num_segments</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.unsorted_batch_segment_sum" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.unsorted_segment_sum">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">unsorted_segment_sum</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">segment_ids</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">num_segments</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.unsorted_segment_sum" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.unsorted_segment_sum_like">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">unsorted_segment_sum_like</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">segment_ids</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">like</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.unsorted_segment_sum_like" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.xdivy">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">xdivy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.xdivy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.math.xlogy">
+<code class="sig-prename descclassname">oneflow.math.</code><code class="sig-name descname">xlogy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.math.xlogy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="nn.html" class="btn btn-neutral float-right" title="oneflow.nn" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="losses.html" class="btn btn-neutral float-left" title="oneflow.losses" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, OneFlow
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

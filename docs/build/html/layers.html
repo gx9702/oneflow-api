@@ -1,0 +1,466 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>oneflow.layers &mdash; OneFlow  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="oneflow.data" href="data.html" />
+    <link rel="prev" title="oneflow.nn" href="nn.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> OneFlow
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OneFlow Python API</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="oneflow.html">oneflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="env.html">oneflow.env</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">oneflow.config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="train.html">oneflow.train</a></li>
+<li class="toctree-l1"><a class="reference internal" href="losses.html">oneflow.losses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math.html">oneflow.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nn.html">oneflow.nn</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">oneflow.layers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-oneflow.layers">Operators with variables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">oneflow.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distribute.html">oneflow.distribute</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OneFlow</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>oneflow.layers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/layers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="oneflow-layers">
+<h1>oneflow.layers<a class="headerlink" href="#oneflow-layers" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-oneflow.layers">
+<span id="operators-with-variables"></span><h2>Operators with variables<a class="headerlink" href="#module-oneflow.layers" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="oneflow.layers.batch_normalization">
+<code class="sig-prename descclassname">oneflow.layers.</code><code class="sig-name descname">batch_normalization</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">momentum</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.99</span></em>, <em class="sig-param"><span class="n">epsilon</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.001</span></em>, <em class="sig-param"><span class="n">center</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">scale</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">beta_initializer</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>oneflow.core.operator.op_conf_pb2.InitializerConf<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gamma_initializer</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>oneflow.core.operator.op_conf_pb2.InitializerConf<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">beta_regularizer</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>oneflow.core.operator.op_conf_pb2.RegularizerConf<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gamma_regularizer</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>oneflow.core.operator.op_conf_pb2.RegularizerConf<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">moving_mean_initializer</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>oneflow.core.operator.op_conf_pb2.InitializerConf<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">moving_variance_initializer</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>oneflow.core.operator.op_conf_pb2.InitializerConf<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">trainable</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">training</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'BatchNorm'</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.layers.batch_normalization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Analogous to <a class="reference external" href="https://www.tensorflow.org/api_docs/python/tf/keras/layers/BatchNormalization">tf.keras.layers.BatchNormalization</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inputs</strong> (<em>remote_blob_util.BlobDef</em>) – Input <cite>Blob</cite>.</p></li>
+<li><p><strong>axis</strong> (<em>int</em><em>, </em><em>optional</em>) – An int specifies the aixs that should be normalized . Default is -1, which normalizes the last axis.</p></li>
+<li><p><strong>momentum</strong> (<a class="reference internal" href="oneflow.html#oneflow.float" title="oneflow.float"><em>float</em></a><em>, </em><em>optional</em>) – A float specifies the momontum for the moving average. Defaults to 0.99.</p></li>
+<li><p><strong>epsilon</strong> (<a class="reference internal" href="oneflow.html#oneflow.float" title="oneflow.float"><em>float</em></a><em>, </em><em>optional</em>) – A small float added to avoid division by zero. Defaults to 0.001.</p></li>
+<li><p><strong>center</strong> (<em>bool</em><em>, </em><em>optional</em>) – A boolean specifies whether to add offset to normalized <cite>Blob</cite>. Defaults to True.</p></li>
+<li><p><strong>scale</strong> (<em>bool</em><em>, </em><em>optional</em>) – A boolean specifies whether to multiply normalized <cite>Blob</cite> by gamma. Defaults to True.</p></li>
+<li><p><strong>beta_initializer</strong> (<em>Optional</em><em>[</em><em>op_conf_util.InitializerConf</em><em>]</em><em>, </em><em>optional</em>) – Initializer for beta. Defaults to None.</p></li>
+<li><p><strong>gamma_initializer</strong> (<em>Optional</em><em>[</em><em>op_conf_util.InitializerConf</em><em>]</em><em>, </em><em>optional</em>) – Initializer for gamma. Defaults to None.</p></li>
+<li><p><strong>beta_regularizer</strong> (<em>Optional</em><em>[</em><em>op_conf_util.RegularizerConf</em><em>]</em><em>, </em><em>optional</em>) – Regularizer for beta. Defaults to None.</p></li>
+<li><p><strong>gamma_regularizer</strong> (<em>Optional</em><em>[</em><em>op_conf_util.RegularizerConf</em><em>]</em><em>, </em><em>optional</em>) – Regularizer for gamma. Defaults to None.</p></li>
+<li><p><strong>moving_mean_initializer</strong> (<em>Optional</em><em>[</em><em>op_conf_util.InitializerConf</em><em>]</em><em>, </em><em>optional</em>) – Initializer for moving mean. Defaults to None.</p></li>
+<li><p><strong>moving_variance_initializer</strong> (<em>Optional</em><em>[</em><em>op_conf_util.InitializerConf</em><em>]</em><em>, </em><em>optional</em>) – Initializer for moving variance. Defaults to None.</p></li>
+<li><p><strong>trainable</strong> (<em>bool</em><em>, </em><em>optional</em>) – A boolean specifies whether to train variables. Defaults to True.</p></li>
+<li><p><strong>training</strong> (<em>bool</em><em>, </em><em>optional</em>) – A boolean specifies whether now is training the model. Defaults to True.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This layer’s name. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>Blob</cite> with same shape of input.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>remote_blob_util.BlobDef</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If axis is out of dimension of input.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.layers.categorical_ordinal_encoder">
+<code class="sig-prename descclassname">oneflow.layers.</code><code class="sig-name descname">categorical_ordinal_encoder</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">capacity</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">hash_precomputed</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'CategoricalOrdinalEncoder'</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.layers.categorical_ordinal_encoder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.layers.conv2d">
+<code class="sig-prename descclassname">oneflow.layers.</code><code class="sig-name descname">conv2d</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">filters</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">kernel_size</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">strides</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">padding</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'VALID'</span></em>, <em class="sig-param"><span class="n">data_format</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'NCHW'</span></em>, <em class="sig-param"><span class="n">dilation_rate</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">groups</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">activation</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>oneflow.python.framework.remote_blob.BlobDef<span class="p">, </span>str<span class="p">]</span><span class="p">, </span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_bias</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">kernel_initializer</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>oneflow.core.operator.op_conf_pb2.InitializerConf<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bias_initializer</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>oneflow.core.operator.op_conf_pb2.InitializerConf<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kernel_regularizer</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>oneflow.core.operator.op_conf_pb2.RegularizerConf<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bias_regularizer</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>oneflow.core.operator.op_conf_pb2.RegularizerConf<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">trainable</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'Conv2d'</span></em>, <em class="sig-param"><span class="n">weight_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bias_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.layers.conv2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>2D convolution layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inputs</strong> (<em>remote_blob_util.BlobDef</em>) – A 4D input <cite>Blob</cite>.</p></li>
+<li><p><strong>filters</strong> (<em>int</em>) – An integer specifies the dimensionality of the output space.</p></li>
+<li><p><strong>kernel_size</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>List</em><em>[</em><em>int</em><em>]</em><em>, </em><em>Tuple</em><em>[</em><em>int</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – An integer or tuple/list specifies the height and width of the convolution window.
+When it is an integer, a square window is applied to the input. Defaults to 1.</p></li>
+<li><p><strong>strides</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>List</em><em>[</em><em>int</em><em>]</em><em>, </em><em>Tuple</em><em>[</em><em>int</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – An integer or tuple/list specifies the strides of the convolution window along the height and width.
+When it is an integer, the same value for the all spatial dimesions is applied. Defaults to 1.</p></li>
+<li><p><strong>padding</strong> (<em>str</em><em>, </em><em>optional</em>) – “VALID” or “SAME”. Defaults to “VALID”.</p></li>
+<li><p><strong>data_format</strong> (<em>str</em><em>, </em><em>optional</em>) – A string specifies the format of the input <cite>Blob</cite>, one of “NCHW” or “NHWC” (default: “NCHW”). “NCHW” cooresponds to channels_first, i.e. the input <cite>Blob</cite> with shape (batch_size, channels, height, width).
+“NHWC” cooresponds to channels_last, i.e. the input <cite>Blob</cite> with shape (batch_size, height, width, channels). Defaults to “NCHW”.</p></li>
+<li><p><strong>dilation_rate</strong> (<em>int</em><em>, </em><em>optional</em>) – An integer or tuple/list specifies the dilation rate for the dilated convolution. When it is an integer, the same dilation rate is applied for the all dimensions. Defaults to 1.</p></li>
+<li><p><strong>groups</strong> (<em>int</em><em>, </em><em>optional</em>) – A positive integer specifies number of groups for the Group conv. Defaults to 1.</p></li>
+<li><p><strong>activation</strong> (<em>Optional</em><em>[ </em><em>Callable</em><em>[</em><em>[</em><em>remote_blob_util.BlobDef</em><em>, </em><em>str</em><em>]</em><em>, </em><em>remote_blob_util.BlobDef</em><em>] </em><em>]</em><em>, </em><em>optional</em>) – Activation function. Defaults to None.</p></li>
+<li><p><strong>use_bias</strong> (<em>bool</em><em>, </em><em>optional</em>) – A boolean specifies whether to use a bias vector. Defaults to True.</p></li>
+<li><p><strong>kernel_initializer</strong> (<em>Optional</em><em>[</em><em>op_conf_util.InitializerConf</em><em>]</em><em>, </em><em>optional</em>) – Initializer for the kernel weights matrix. Defaults to None.</p></li>
+<li><p><strong>bias_initializer</strong> (<em>Optional</em><em>[</em><em>op_conf_util.InitializerConf</em><em>]</em><em>, </em><em>optional</em>) – Initializer for the bias vector. Defaults to None.</p></li>
+<li><p><strong>kernel_regularizer</strong> (<em>Optional</em><em>[</em><em>op_conf_util.RegularizerConf</em><em>]</em><em>, </em><em>optional</em>) – Regularizer for the kernel weights matrix. Defaults to None.</p></li>
+<li><p><strong>bias_regularizer</strong> (<em>Optional</em><em>[</em><em>op_conf_util.RegularizerConf</em><em>]</em><em>, </em><em>optional</em>) – Regularizer for the bias vector . Defaults to None.</p></li>
+<li><p><strong>trainable</strong> (<em>bool</em><em>, </em><em>optional</em>) – A boolean specifies whether to train variables. Defaults to True.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This layer’s name. Defaults to None.</p></li>
+<li><p><strong>weight_name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This weight’s name. Defaults to None.</p></li>
+<li><p><strong>bias_name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This bias’s name. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – If the type of kernel_size is not one of integer, list, tuple.</p></li>
+<li><p><strong>ValueError</strong> – The number of groups must be positive and number of filters must be divisible by it.</p></li>
+<li><p><strong>ValueError</strong> – If data_format is not one of ‘NCHW’, ‘NHWC’.</p></li>
+<li><p><strong>ValueError</strong> – If number of input channels is not divisible by number of groups or less than number of groups.</p></li>
+<li><p><strong>ValueError</strong> – Number of group must be one when data_format is ‘NHWC’.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A 4D <cite>Blob</cite> with the shape of (batch_size, filters, new_height, new_width).</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>remote_blob_util.BlobDef</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.layers.dense">
+<code class="sig-prename descclassname">oneflow.layers.</code><code class="sig-name descname">dense</code><span class="sig-paren">(</span><em class="sig-param">inputs: oneflow.python.framework.remote_blob.BlobDef, units: int, activation: Optional[Callable[[oneflow.python.framework.remote_blob.BlobDef, str], oneflow.python.framework.remote_blob.BlobDef]] = None, use_bias: bool = True, kernel_initializer: Optional[oneflow.core.operator.op_conf_pb2.InitializerConf] = None, bias_initializer: Optional[oneflow.core.operator.op_conf_pb2.InitializerConf] = None, kernel_regularizer: Optional[oneflow.core.operator.op_conf_pb2.RegularizerConf] = None, bias_regularizer: Optional[oneflow.core.operator.op_conf_pb2.RegularizerConf] = None, trainable: bool = True, name: str = 'Dense', model_distribute: oneflow.python.framework.distribute.Distribute = &lt;oneflow.python.framework.distribute.BroadcastDistribute object&gt;</em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.layers.dense" title="Permalink to this definition">¶</a></dt>
+<dd><p>Analogous to <a class="reference external" href="https://www.tensorflow.org/api_docs/python/tf/keras/layers/Dense">tf.keras.layers.Dense</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inputs</strong> (<em>remote_blob_util.BlobDef</em>) – A 2D input <cite>Blob</cite>.</p></li>
+<li><p><strong>units</strong> (<em>int</em>) – A positive integer for the dimensionality of the output space.</p></li>
+<li><p><strong>activation</strong> (<em>Optional</em><em>[</em><em>remote_blob_util.BlobDef</em><em>]</em><em>, </em><em>optional</em>) – Activation function. Defaults to None.</p></li>
+<li><p><strong>use_bias</strong> (<em>bool</em><em>, </em><em>optional</em>) – A boolean specifies whether to use a bias vector. Defaults to True.</p></li>
+<li><p><strong>kernel_initializer</strong> (<em>Optional</em><em>[</em><em>op_conf_util.InitializerConf</em><em>]</em><em>, </em><em>optional</em>) – Initializer for the kernel weights matrix. Defaults to None.</p></li>
+<li><p><strong>bias_initializer</strong> (<em>Optional</em><em>[</em><em>op_conf_util.InitializerConf</em><em>]</em><em>, </em><em>optional</em>) – [description]. Defaults to None.</p></li>
+<li><p><strong>kernel_regularizer</strong> (<em>Optional</em><em>[</em><em>op_conf_util.RegularizerConf</em><em>]</em><em>, </em><em>optional</em>) – [description]. Defaults to None.</p></li>
+<li><p><strong>bias_regularizer</strong> (<em>Optional</em><em>[</em><em>op_conf_util.RegularizerConf</em><em>]</em><em>, </em><em>optional</em>) – Regularizer for the bias vector. Defaults to None.</p></li>
+<li><p><strong>trainable</strong> (<em>bool</em><em>, </em><em>optional</em>) – A boolean specifies whether to train the variables. Defaults to True.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This layer’s name. Defaults to None.</p></li>
+<li><p><strong>model_distribute</strong> (<em>distribute_util.Distribute</em><em>, </em><em>optional</em>) – Define the way to ditribute the model. Defaults to distribute_util.broadcast().</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A N-D <cite>Blob</cite> with the shape of (batch_size, units).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>remote_blob_util.BlobDef</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – The dimension of input <cite>Blob</cite> must be less than 2.</p></li>
+<li><p><strong>VauleError</strong> – Model distribute must be in auto, broadcast, split.</p></li>
+<li><p><strong>ValueError</strong> – The input must be a 2D <cite>Blob</cite> when the model distribute is split.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.layers.layer_norm">
+<code class="sig-prename descclassname">oneflow.layers.</code><code class="sig-name descname">layer_norm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">center</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">scale</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">trainable</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">begin_norm_axis</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">begin_params_axis</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">epsilon</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">1e-05</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'LayerNorm'</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.layers.layer_norm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Analogous to <a class="reference external" href="https://www.tensorflow.org/api_docs/python/tf/keras/layers/LayerNormalization">tf.keras.layers.LayerNormalization</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inputs</strong> (<em>remote_blob_util.BlobDef</em>) – Input <cite>Blob</cite>.</p></li>
+<li><p><strong>center</strong> (<em>bool</em><em>, </em><em>optional</em>) – A boolean specifies whether to shift input <cite>Blob</cite>. Defaults to True.</p></li>
+<li><p><strong>scale</strong> (<em>bool</em><em>, </em><em>optional</em>) – A boolean specifies whether to scaleinput <cite>Blob</cite>. Defaults to True.</p></li>
+<li><p><strong>trainable</strong> (<em>bool</em><em>, </em><em>optional</em>) – A boolean specifies whether to train variables. Defaults to True.</p></li>
+<li><p><strong>begin_norm_axis</strong> (<em>int</em><em>, </em><em>optional</em>) – An integer specifies which axis to normalize at first. Defaults to 1.</p></li>
+<li><p><strong>begin_params_axis</strong> (<em>int</em><em>, </em><em>optional</em>) – An integer specifies which axis params at . Defaults to -1.</p></li>
+<li><p><strong>epsilon</strong> (<a class="reference internal" href="oneflow.html#oneflow.float" title="oneflow.float"><em>float</em></a><em>, </em><em>optional</em>) – A small float is added to avoid division by zero. Defaults to 1e-5.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This layer’s name. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A normalized <cite>Blob</cite> with same shape of input.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>remote_blob_util.BlobDef</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.layers.layer_norm_grad">
+<code class="sig-prename descclassname">oneflow.layers.</code><code class="sig-name descname">layer_norm_grad</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dy</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">mean</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">inv_variance</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">begin_norm_axis</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'LayerNormGrad'</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.layers.layer_norm_grad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Layer normalization</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dy</strong> (<em>remote_blob_util.BlobDef</em>) – Upstream derivstives.</p></li>
+<li><p><strong>x</strong> (<em>remote_blob_util.BlobDef</em>) – Input <cite>Blob</cite>.</p></li>
+<li><p><strong>mean</strong> (<em>remote_blob_util.BlobDef</em>) – Mean over neurons.</p></li>
+<li><p><strong>inv_variance</strong> (<em>remote_blob_util.BlobDef</em>) – Variance over neurons.</p></li>
+<li><p><strong>begin_norm_axis</strong> (<em>int</em><em>, </em><em>optional</em>) – An integer specifies which axis to normalize at first. Defaults to 1.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This layer’s name. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Gradient with respect to input <cite>Blob</cite>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>remote_blob_util.BlobDef</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.layers.layer_norm_param_grad">
+<code class="sig-prename descclassname">oneflow.layers.</code><code class="sig-name descname">layer_norm_param_grad</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dy</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">norm</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">gamma</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">begin_params_axis</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'LayerNormParamGrad'</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>oneflow.python.framework.remote_blob.BlobDef<span class="p">, </span>oneflow.python.framework.remote_blob.BlobDef<span class="p">, </span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span><a class="headerlink" href="#oneflow.layers.layer_norm_param_grad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Backward pass for layer normalization</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dy</strong> (<em>remote_blob_util.BlobDef</em>) – Upstream derivstives.</p></li>
+<li><p><strong>norm</strong> (<em>remote_blob_util.BlobDef</em>) – Normalized output.</p></li>
+<li><p><strong>gamma</strong> (<em>remote_blob_util.BlobDef</em>) – Scale parameter.</p></li>
+<li><p><strong>begin_params_axis</strong> (<em>int</em><em>, </em><em>optional</em>) – From which parameters to begin with. Defaults to -1.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This layer’s name. Defaults to ‘LayerNormParamGrad’.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>normalized_diff: Gradient with respect to input <cite>Blob</cite>.
+beta_diff: Gradient with respect to shift parameter beta.
+gamma_diff: Gradient with respect to scale parameter gamma.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tuple[remote_blob_util.BlobDef]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.layers.prelu">
+<code class="sig-prename descclassname">oneflow.layers.</code><code class="sig-name descname">prelu</code><span class="sig-paren">(</span><em class="sig-param">inputs: oneflow.python.framework.remote_blob.BlobDef</em>, <em class="sig-param">alpha_initializer: Optional[oneflow.core.operator.op_conf_pb2.InitializerConf] = None</em>, <em class="sig-param">alpha_regularizer: Optional[oneflow.core.operator.op_conf_pb2.RegularizerConf] = None</em>, <em class="sig-param">shared_axes: Optional[Sequence[int]] = None</em>, <em class="sig-param">trainable: bool = True</em>, <em class="sig-param">name: str = 'PRelu'</em>, <em class="sig-param">model_distribute: oneflow.python.framework.distribute.Distribute = &lt;oneflow.python.framework.distribute.BroadcastDistribute object&gt;</em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.layers.prelu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.layers.upsample_2d">
+<code class="sig-prename descclassname">oneflow.layers.</code><code class="sig-name descname">upsample_2d</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">size</span><span class="p">:</span> <span class="n">Sequence<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">2, 2</span></em>, <em class="sig-param"><span class="n">data_format</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'NCHW'</span></em>, <em class="sig-param"><span class="n">interpolation</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'nearest'</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'Upsample2D'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#oneflow.layers.upsample_2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upsample Operation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>[</em><em>type</em><em>]</em>) – Input <cite>Blob</cite>.</p></li>
+<li><p><strong>size</strong> (<em>tuple</em><em>, </em><em>optional</em>) – (height_scale,width_scale)  Defaults to (2, 2).</p></li>
+<li><p><strong>data_format</strong> (<em>str</em><em>, </em><em>optional</em>) – A string specifies the format of the input <cite>Blob</cite>, one of “NCHW” or “NHWC” (default: “NCHW”). “NCHW” cooresponds to channels_first, i.e. the input <cite>Blob</cite> with shape (batch_size, channels, height, width).
+“NHWC” cooresponds to channels_last, i.e. the input <cite>Blob</cite> with shape (batch_size, height, width, channels).. Defaults to “NCHW”.</p></li>
+<li><p><strong>interpolation</strong> (<em>str</em><em>, </em><em>optional</em>) – Image interpolation algorithm to enlarge the image size. Defaults to “nearest”.</p></li>
+<li><p><strong>name</strong> (<em>[</em><em>type</em><em>]</em><em>, </em><em>optional</em>) – This layer’s name. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – interpolation must be “nearest” or “bilinear”.</p></li>
+<li><p><strong>ValueError</strong> – data_format must be “NHWC” or “NCHW”</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>remote_blob_util.BlobDef:  A <cite>Blob</cite> with new shape of input. if  input size is(2,2),then the  new shape is [N, C, 2H, 2W].</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[type]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="data.html" class="btn btn-neutral float-right" title="oneflow.data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="nn.html" class="btn btn-neutral float-left" title="oneflow.nn" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, OneFlow
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

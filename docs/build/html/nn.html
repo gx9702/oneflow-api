@@ -1,0 +1,797 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>oneflow.nn &mdash; OneFlow  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="oneflow.layers" href="layers.html" />
+    <link rel="prev" title="oneflow.math" href="math.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> OneFlow
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OneFlow Python API</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="oneflow.html">oneflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="env.html">oneflow.env</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">oneflow.config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="train.html">oneflow.train</a></li>
+<li class="toctree-l1"><a class="reference internal" href="losses.html">oneflow.losses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="math.html">oneflow.math</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">oneflow.nn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-oneflow.nn">Operators for neural networks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="layers.html">oneflow.layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">oneflow.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distribute.html">oneflow.distribute</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OneFlow</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>oneflow.nn</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/nn.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="oneflow-nn">
+<h1>oneflow.nn<a class="headerlink" href="#oneflow-nn" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-oneflow.nn">
+<span id="operators-for-neural-networks"></span><h2>Operators for neural networks<a class="headerlink" href="#module-oneflow.nn" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="oneflow.nn.Module">
+<em class="property">class </em><code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">Module</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#oneflow.nn.Module" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="oneflow.nn.Module.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#oneflow.nn.Module.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="oneflow.nn.Module.call_seq_no">
+<em class="property">property </em><code class="sig-name descname">call_seq_no</code><a class="headerlink" href="#oneflow.nn.Module.call_seq_no" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="oneflow.nn.Module.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#oneflow.nn.Module.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="oneflow.nn.Module.module_name">
+<em class="property">property </em><code class="sig-name descname">module_name</code><a class="headerlink" href="#oneflow.nn.Module.module_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.avg_pool1d">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">avg_pool1d</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">ksize</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">strides</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">padding</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">data_format</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'NWC'</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.avg_pool1d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs the average pooling on the input <cite>Blob</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<em>remote_blob_util.BlobDef</em>) – A 3-D <cite>Blob</cite> of the format specified by data_format.</p></li>
+<li><p><strong>ksize</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>Sequence</em><em>[</em><em>int</em><em>]</em><em>]</em>) – An int or list of ints that has length 1 or 3. The size of the window for each dimension of the input <cite>Blob</cite>.</p></li>
+<li><p><strong>strides</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>Sequence</em><em>[</em><em>int</em><em>]</em><em>]</em>) – An int or list of ints that has length 1 or 3. The stride of the sliding window for each dimension of the input <cite>Blob</cite>.</p></li>
+<li><p><strong>padding</strong> (<em>str</em>) – ‘<cite>VALID’</cite> or ‘<cite>SAME’</cite>.</p></li>
+<li><p><strong>data_format</strong> (<em>str</em><em>, </em><em>optional</em>) – ‘<cite>NWC’</cite> or ‘<cite>NCW’</cite>. Defaults to ‘<cite>NWC’</cite>.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This operator’s name(optional). Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>NotImplementedError</strong> – TODO: fix cuDNN bugs in pooling_1d</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A <cite>Blob</cite> of format specified by data_format. The max pooled output <cite>Blob</cite>.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>remote_blob_util.BlobDef</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.avg_pool2d">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">avg_pool2d</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">ksize</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">strides</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">padding</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">data_format</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'NHWC'</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.avg_pool2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs the average pooling on the input. Analogous to <a class="reference external" href="https://www.tensorflow.org/api_docs/python/tf/nn/avg_pool2d">tf.nn.avg_pool2d</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<em>remote_blob_util.BlobDef</em>) – A 4-D <cite>Blob</cite> of shape [batch, height, width, channels].</p></li>
+<li><p><strong>ksize</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>Sequence</em><em>[</em><em>int</em><em>]</em><em>]</em>) – An int or list of ints that has length 1, 2 or 4. The size of the window for each dimension of the input <cite>Blob</cite>.</p></li>
+<li><p><strong>strides</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>Sequence</em><em>[</em><em>int</em><em>]</em><em>]</em>) – An int or list of ints that has length 1, 2 or 4. The stride of the sliding window for each dimension of the input <cite>Blob</cite>.</p></li>
+<li><p><strong>padding</strong> (<em>str</em>) – ‘<cite>VALID’</cite> or ‘<cite>SAME’</cite>. The padding algorithm.</p></li>
+<li><p><strong>data_format</strong> (<em>str</em><em>, </em><em>optional</em>) – ‘<cite>NHWC’</cite> or ‘<cite>NCHW’</cite>. Defaults to “NHWC”.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This operator’s name(optional). Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>Blob</cite> with the same type as ‘<cite>value’</cite>. The average pooled output <cite>Blob</cite>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>remote_blob_util.BlobDef</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.avg_pool3d">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">avg_pool3d</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">ksize</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">strides</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">padding</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">data_format</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'NDHWC'</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.avg_pool3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs the average pooling on the input. Analogous to <a class="reference external" href="https://www.tensorflow.org/api_docs/python/tf/nn/avg_pool3d">tf.nn.avg_pool3d</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<em>remote_blob_util.BlobDef</em>) – A 5-D <cite>Blob</cite> of shape [batch, height, width, channels].</p></li>
+<li><p><strong>ksize</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>Sequence</em><em>[</em><em>int</em><em>]</em><em>]</em>) – An int or list of ints that has length 1, 3 or 5. The size of the window for each dimension of the input <cite>Blob</cite>.</p></li>
+<li><p><strong>strides</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>Sequence</em><em>[</em><em>int</em><em>]</em><em>]</em>) – An int or list of ints that has length 1, 3 or 5. The stride of the sliding window for each dimension of the input <cite>Blob</cite>.</p></li>
+<li><p><strong>padding</strong> (<em>str</em>) – ‘<cite>VALID’</cite> or ‘<cite>SAME’</cite>.</p></li>
+<li><p><strong>data_format</strong> (<em>str</em><em>, </em><em>optional</em>) – ‘<cite>NDHWC’</cite> or ‘<cite>NCDHW’</cite>. Defaults to “NDHWC”.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This operator’s name(optional).Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>Blob</cite> with the same type as value. The average pooled output <cite>Blob</cite>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>remote_blob_util.BlobDef</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.batch_normalization">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">batch_normalization</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">mean</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">variance</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">offset</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">scale</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">variance_epsilon</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.batch_normalization" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>This op does not fully align with tf.nn.batch_normalization. mean, variable, offset and scale</dt><dd><p>are always 1D. Users need to specify “axis” to 1 for NCHW data format.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>remote_blob_util.BlobDef</em>) – Input <cite>Blob</cite> of arbitrary dimensionality.</p></li>
+<li><p><strong>mean</strong> (<em>remote_blob_util.BlobDef</em>) – A 1D mean <cite>Blob</cite>.</p></li>
+<li><p><strong>variance</strong> (<em>remote_blob_util.BlobDef</em>) – A 1D variance <cite>Blob</cite>.</p></li>
+<li><p><strong>offset</strong> (<em>remote_blob_util.BlobDef</em>) – An 1D offset <cite>Blob</cite>, often denoted  in equations, or None. If present, will be added to the normalized <cite>Blob</cite>.</p></li>
+<li><p><strong>scale</strong> (<em>remote_blob_util.BlobDef</em>) – A 1D scale <cite>Blob</cite>, often denoted  in equations, or None. If present, the scale is applied to the normalized <cite>Blob</cite>.</p></li>
+<li><p><strong>variance_epsilon</strong> (<a class="reference internal" href="oneflow.html#oneflow.float" title="oneflow.float"><em>float</em></a>) – A small float number to avoid dividing by 0.</p></li>
+<li><p><strong>axis</strong> (<em>int</em><em>, </em><em>optional</em>) – 1 for ‘<cite>NCHW’</cite> data format. Defaults to -1.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This operator’s name.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the normalized, scaled, offset <cite>Blob</cite>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>remote_blob_util.BlobDef</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.bias_add">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">bias_add</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">bias</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">data_format</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.bias_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Analogous to <a class="reference external" href="https://www.tensorflow.org/api_docs/python/tf/nn/bias_add">tf.nn.bias_add</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>remote_blob_util.BlobDef</em>) – A <cite>Blob</cite>.</p></li>
+<li><p><strong>bias</strong> (<em>remote_blob_util.BlobDef</em>) – A 1-D <cite>Blob</cite> with size matching the channel dimension of value. And has the same type as value unless value is a quantized type.</p></li>
+<li><p><strong>data_format</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – A string. ‘<cite>N…C’</cite> or ‘<cite>NC…’</cite>. Defaults to None.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This operator’s name. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – ValueError if data format is unrecognized, if value has less than two dimensions with ‘<cite>N..C’</cite>/None data_format or value has less than three dimensions with ‘<cite>NC..’</cite> data_format, if bias is a vector,</p></li>
+<li><p><strong>or if the size of bias does not match the size of the channel dimension of value.</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A <cite>Blob</cite> with the same type as value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>remote_blob_util.BlobDef</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.compat_conv2d">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">compat_conv2d</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">filters</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">strides</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">padding</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">data_format</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'NHWC'</span></em>, <em class="sig-param"><span class="n">dilations</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">groups</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.compat_conv2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes a 2-D convolution given <cite>input</cite> and 4-D <cite>filters</cite> <cite>Blob</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<em>remote_blob_util.BlobDef</em>) – A <cite>Blob</cite> of rank at least 4.</p></li>
+<li><p><strong>filters</strong> (<em>remote_blob_util.BlobDef</em>) – A <cite>Blob</cite> with the same type as <cite>input</cite> and has the shape <cite>[filter_height, filter_width, in_channels, out_channels]</cite></p></li>
+<li><p><strong>strides</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>Sequence</em><em>[</em><em>int</em><em>]</em><em>]</em>) – An int or list of <cite>ints</cite> that has length <cite>1</cite>, <cite>2</cite> or <cite>4</cite>. The stride of the sliding window for each dimension of <cite>input</cite>.</p></li>
+<li><p><strong>padding</strong> (<em>str</em>) – <cite>“SAME”</cite> or <cite>“VALID”</cite> indicating the type of padding algorithm to use, or a list indicating the explicit paddings at the start and end of each dimension.</p></li>
+<li><p><strong>data_format</strong> (<em>str</em><em>, </em><em>optional</em>) – <cite>“NHWC”</cite> or <cite>“NCHW”</cite>. Defaults to <cite>“NHWC”</cite>.</p></li>
+<li><p><strong>dilations</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><em>int</em><em>, </em><em>Sequence</em><em>[</em><em>int</em><em>]</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – The dilation factor for each dimension of`input`. Defaults to None.</p></li>
+<li><p><strong>groups</strong> (<em>int</em><em>, </em><em>optional</em>) – int value greater than 0. Defaults to 1.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This operator’s name. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – strides must be an int or a list.</p></li>
+<li><p><strong>ValueError</strong> – data_format must be “NHWC” or “NCHW”.</p></li>
+<li><p><strong>ValueError</strong> – dilations length must be 2 when passed as a list.</p></li>
+<li><p><strong>ValueError</strong> – dilations must be an int or a list.</p></li>
+<li><p><strong>ValueError</strong> – data_format NHWC not support groups &gt; 1.</p></li>
+<li><p><strong>ValueError</strong> – invalid data_format.</p></li>
+<li><p><strong>ValueError</strong> – padding must be “SAME” or “VALID”.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A <cite>Blob</cite> with the same type as <cite>input</cite> and the same outer batch shape.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>remote_blob_util.BlobDef</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.conv2d">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">conv2d</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">filters</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">strides</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">padding</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">data_format</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'NHWC'</span></em>, <em class="sig-param"><span class="n">dilations</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">groups</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.conv2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Analogous to <a class="reference external" href="https://www.tensorflow.org/api_docs/python/tf/nn/conv2d">tf.nn.conv2d</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<em>remote_blob_util.BlobDef</em>) – A <cite>Blob</cite> of rank at least 4.[batch_num, height, width, channel]</p></li>
+<li><p><strong>filters</strong> (<em>remote_blob_util.BlobDef</em>) – A <cite>Blob</cite> with the same type as <cite>input</cite> and has the shape <cite>[filter_height, filter_width, in_channels, out_channels]</cite></p></li>
+<li><p><strong>strides</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>Sequence</em><em>[</em><em>int</em><em>]</em><em>]</em>) – An int or list of <cite>ints</cite> that has length <cite>1</cite>, <cite>2</cite> or <cite>4</cite>. The stride of the sliding window for each dimension of <cite>input</cite>.</p></li>
+<li><p><strong>padding</strong> (<em>str</em>) – padding: <cite>string</cite> <cite>“SAME”</cite> or <cite>“VALID”</cite> indicating the type of padding algorithm to use, or a list indicating the explicit paddings at the start and end of each dimension.</p></li>
+<li><p><strong>data_format</strong> (<em>str</em><em>, </em><em>optional</em>) – <cite>“NHWC” or “NCHW”</cite>. Defaults to <cite>“NHWC”</cite>.</p></li>
+<li><p><strong>dilations</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><em>int</em><em>, </em><em>Sequence</em><em>[</em><em>int</em><em>]</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – The dilation factor for each dimension of`input`. Defaults to None.</p></li>
+<li><p><strong>groups</strong> (<em>int</em><em>, </em><em>optional</em>) – int value greater than 0. Defaults to 1.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This operator’s name. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – strides must be an int or a list.</p></li>
+<li><p><strong>ValueError</strong> – padding must be “SAME” or “VALID”.</p></li>
+<li><p><strong>ValueError</strong> – data_format must be “NHWC” or “NCHW”.</p></li>
+<li><p><strong>ValueError</strong> – dilations must be an int or a list.</p></li>
+<li><p><strong>ValueError</strong> – invalid data_format.</p></li>
+<li><p><strong>ValueError</strong> – data_format NHWC not support groups &gt; 1</p></li>
+<li><p><strong>ValueError</strong> – invalid data_format.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A <cite>Blob</cite> with the same type as <cite>input</cite> and the same outer batch shape.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>remote_blob_util.BlobDef</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.conv2d_transpose">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">conv2d_transpose</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_shape</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">strides</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">padding</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'VALID'</span></em>, <em class="sig-param"><span class="n">data_format</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'NHWC'</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">input</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filters</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dilations</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.conv2d_transpose" title="Permalink to this definition">¶</a></dt>
+<dd><p>2d transposed convolution</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>Optional</em><em>[</em><em>remote_blob_util.BlobDef</em><em>]</em><em>, </em><em>optional</em>) – 4-d <cite>Blob</cite>. Defaults to None.</p></li>
+<li><p><strong>filter</strong> (<em>Optional</em><em>[</em><em>remote_blob_util.BlobDef</em><em>]</em><em>, </em><em>optional</em>) – Filter of transposed convolution, usually a variable. Defaults to None.</p></li>
+<li><p><strong>output_shape</strong> (<em>Optional</em><em>[</em><em>remote_blob_util.BlobDef</em><em>]</em><em>, </em><em>optional</em>) – A 1-D <cite>Blob</cite> representing the output shape of the deconvolution op. Defaults to None.</p></li>
+<li><p><strong>strides</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><em>int</em><em>, </em><em>Sequence</em><em>[</em><em>int</em><em>]</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – <cite>int</cite> or <cite>int list</cite>. Defaults to None.</p></li>
+<li><p><strong>padding</strong> (<em>str</em><em>, </em><em>optional</em>) – <cite>‘VALID’</cite> or <cite>‘SAME’</cite>. Defaults to “VALID”.</p></li>
+<li><p><strong>data_format</strong> (<em>str</em><em>, </em><em>optional</em>) – <cite>‘NHWC’</cite> or <cite>‘NCHW’</cite>. Defaults to “NHWC”.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This operator’s name(optional). Defaults to None.</p></li>
+<li><p><strong>input</strong> (<em>Optional</em><em>[</em><em>remote_blob_util.BlobDef</em><em>]</em><em>, </em><em>optional</em>) – Alias for value. Defaults to None.</p></li>
+<li><p><strong>filters</strong> (<em>Optional</em><em>[</em><em>remote_blob_util.BlobDef</em><em>]</em><em>, </em><em>optional</em>) – Alias for filter. Defaults to None.</p></li>
+<li><p><strong>dilations</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><em>int</em><em>, </em><em>Sequence</em><em>[</em><em>int</em><em>]</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – The dilation factor for each dimension of input. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – shapes of <cite>filter</cite> and <cite>input</cite> must match.</p></li>
+<li><p><strong>ValueError</strong> – dilations must be an int or a list.</p></li>
+<li><p><strong>ValueError</strong> – data_format must be “NHWC” or “NCHW”.</p></li>
+<li><p><strong>ValueError</strong> – padding must be “SAME” or “VALID”.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A <cite>Blob</cite> with the same type as <cite>value</cite>.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>remote_blob_util.BlobDef</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.dropout">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">dropout</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">rate</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">noise_shape</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>oneflow.python.framework.remote_blob.BlobDef<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">seed</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.dropout" title="Permalink to this definition">¶</a></dt>
+<dd><p>For preventing overfitting, randomly set elements to zero. Analogous to <a class="reference external" href="https://www.tensorflow.org/api_docs/python/tf/nn/dropout">tf.nn.dropout</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>remote_blob_util.BlobDef</em>) – A floating point <cite>Blob</cite>.</p></li>
+<li><p><strong>rate</strong> (<a class="reference internal" href="oneflow.html#oneflow.float" title="oneflow.float"><em>float</em></a>) – A scalar <cite>Blob</cite> with the same type as x. The probability that each element is dropped.</p></li>
+<li><p><strong>noise_shape</strong> (<em>Optional</em><em>[</em><em>remote_blob_util.BlobDef</em><em>]</em><em>, </em><em>optional</em>) – optional: A 1-D <cite>Blob</cite>, representing the shape for randomly generated keep/drop flags. Defaults to None.Defaults to None.</p></li>
+<li><p><strong>seed</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em><em>, </em><em>optional</em>) – Optional int value. Defaults to None.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This operator’s name(optional). Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>Blob</cite> of the same shape of x.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>remote_blob_util.BlobDef</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If rate is not in [0, 1) or if x is not a floating point <cite>Blob</cite>. Rate=1 is not allowed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.leaky_relu">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">leaky_relu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">alpha</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.2</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.leaky_relu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Leaky ReLU activation value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>remote_blob_util.BlobDef</em>) – A <cite>Blob</cite> representing preactivation values.</p></li>
+<li><p><strong>alpha</strong> (<a class="reference internal" href="oneflow.html#oneflow.float" title="oneflow.float"><em>float</em></a><em>, </em><em>optional</em>) – Slope of the activation function at x &lt; 0 with float type. Default value is 0.2.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This operator’s name(optional). Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The activation <cite>Blob</cite></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>remote_blob_util.BlobDef</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.max_pool1d">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">max_pool1d</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">ksize</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">strides</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">padding</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">data_format</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'NWC'</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.max_pool1d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs the max pooling on the input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<em>remote_blob_util.BlobDef</em>) – A 3-D <cite>Blob</cite> of the format specified by data_format.</p></li>
+<li><p><strong>ksize</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>Sequence</em><em>[</em><em>int</em><em>]</em><em>]</em>) – An int or list of ints that has length 1 or 3. The size of the window for each dimension of the input <cite>Blob</cite>.</p></li>
+<li><p><strong>strides</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>Sequence</em><em>[</em><em>int</em><em>]</em><em>]</em>) – An int or list of ints that has length 1 or 3. The stride of the sliding window for each dimension of the input <cite>Blob</cite>.</p></li>
+<li><p><strong>padding</strong> (<em>str</em>) – ‘<cite>VALID’</cite> or ‘<cite>SAME’</cite>. The padding algorithm.</p></li>
+<li><p><strong>data_format</strong> (<em>str</em><em>, </em><em>optional</em>) – An optional string from: ‘<cite>NWC’</cite>, ‘<cite>NCW’</cite>. Defaults to ‘<cite>NWC’</cite>.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This operator’s name(optional).Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>NotImplementedError</strong> – TODO: fix cuDNN bugs in pooling_1d</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A <cite>Blob</cite> of format specified by data_format. The max pooled output <cite>Blob</cite>.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>remote_blob_util.BlobDef</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.max_pool2d">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">max_pool2d</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">ksize</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">strides</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">padding</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">data_format</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'NHWC'</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.max_pool2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs the max pooling on the input <cite>Blob</cite>.Analogous to <a class="reference external" href="https://www.tensorflow.org/api_docs/python/tf/nn/max_pool2d">tf.nn.max_pool2d</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<em>remote_blob_util.BlobDef</em>) – A 4-D <cite>Blob</cite> of the format specified by data_format.</p></li>
+<li><p><strong>ksize</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>Sequence</em><em>[</em><em>int</em><em>]</em><em>]</em>) – An int or list of ints that has length 1, 2 or 4. The size of the window for each dimension of the input <cite>Blob</cite>.</p></li>
+<li><p><strong>strides</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>Sequence</em><em>[</em><em>int</em><em>]</em><em>]</em>) – An int or list of ints that has length 1, 2 or 4. The stride of the sliding window for each dimension of the input <cite>Blob</cite>.</p></li>
+<li><p><strong>padding</strong> (<em>str</em>) – ‘<cite>VALID’</cite> or ‘<cite>SAME’</cite>. The padding algorithm.</p></li>
+<li><p><strong>data_format</strong> (<em>str</em><em>, </em><em>optional</em>) – ‘<cite>NHWC’</cite>, ‘<cite>NCHW’</cite> or ‘<cite>NCHW_VECT_C’</cite>. Defaults to “NHWC”.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This operator’s name(optional).. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>Blob</cite> of format specified by data_format. The max pooled output <cite>Blob</cite>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>remote_blob_util.BlobDef</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.max_pool3d">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">max_pool3d</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">ksize</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">strides</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>int<span class="p">, </span>Sequence<span class="p">[</span>int<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">padding</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">data_format</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'NDHWC'</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.max_pool3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs the max pooling on the input. Analogous to <a class="reference external" href="https://www.tensorflow.org/api_docs/python/tf/nn/max_pool3d">tf.nn.max_pool3d</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<em>remote_blob_util.BlobDef</em>) – A 5-D <cite>Blob</cite> of the format specified by data_format.</p></li>
+<li><p><strong>ksize</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>Sequence</em><em>[</em><em>int</em><em>]</em><em>]</em>) – An int or list of ints that has length 1, 3 or 5. The size of the window for each dimension of the input <cite>Blob</cite>.</p></li>
+<li><p><strong>strides</strong> (<em>Union</em><em>[</em><em>int</em><em>, </em><em>Sequence</em><em>[</em><em>int</em><em>]</em><em>]</em>) – An int or list of ints that has length 1, 3 or 5. The stride of the sliding window for each dimension of the input <cite>Blob</cite>.</p></li>
+<li><p><strong>padding</strong> (<em>str</em>) – ‘<cite>VALID’</cite> or ‘<cite>SAME’</cite>. The padding algorithm</p></li>
+<li><p><strong>data_format</strong> (<em>str</em><em>, </em><em>optional</em>) – “NDHWC” or “NCDHW”. Defaults to “NDHWC”.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This operator’s name(optional).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>Blob</cite> of format specified by data_format. The max pooled output <cite>Blob</cite>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>remote_blob_util.BlobDef</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.random_mask_like">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">random_mask_like</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">like</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">rate</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">seed</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">noise_shape</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Sequence<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.random_mask_like" title="Permalink to this definition">¶</a></dt>
+<dd><p>Random mask <cite>Blob</cite> with same shape as ‘<cite>like’</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>like</strong> (<em>remote_blob_util.BlobDef</em>) – A <cite>Blob</cite>.</p></li>
+<li><p><strong>rate</strong> (<a class="reference internal" href="oneflow.html#oneflow.float" title="oneflow.float"><em>float</em></a>) – A float value for the probability that each element is dropped.</p></li>
+<li><p><strong>seed</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em><em>, </em><em>optional</em>) – Optional, int value. Defaults to None.</p></li>
+<li><p><strong>noise_shape</strong> (<em>Optional</em><em>[</em><em>Sequence</em><em>]</em><em>, </em><em>optional</em>) – Optional, A 1-D <cite>Blob</cite>, representing the shape for randomly generated keep/drop flags. Defaults to None.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This operator’s name(optional). Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A random mask <cite>Blob</cite> of the same shape of ‘<cite>like’</cite>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>remote_blob_util.BlobDef</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If rate is not in [0, 1). Rate=1 is not allowed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.relu">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">relu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.relu" title="Permalink to this definition">¶</a></dt>
+<dd><p>ReLU activation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – Input <cite>Blob</cite>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>Blob</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.sigmoid_cross_entropy_with_logits">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">sigmoid_cross_entropy_with_logits</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">logits</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.sigmoid_cross_entropy_with_logits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes sigmoid cross entropy given logits. Analogous to <a class="reference external" href="https://www.tensorflow.org/api_docs/python/tf/nn/sigmoid_cross_entropy_with_logits">tf.nn.sigmoid_cross_entropy_with_logits</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>labels</strong> (<em>remote_blob_util.BlobDef</em>) – A <cite>Blob</cite> of the same type and shape as logits.</p></li>
+<li><p><strong>logits</strong> (<em>remote_blob_util.BlobDef</em>) – A <cite>Blob</cite> of type float.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This operator’s name(optional). Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>Blob</cite> of the same shape as logits with the componentwise logistic losses.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>remote_blob_util.BlobDef</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If logits and labels do not have the same shape.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.softmax">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">softmax</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">logits</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.softmax" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes softmax activations. Analogous to <a class="reference external" href="https://www.tensorflow.org/api_docs/python/tf/nn/softmax">tf.nn.softmax</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logits</strong> (<em>remote_blob_util.BlobDef</em>) – A non-empty <cite>Blob</cite>.</p></li>
+<li><p><strong>axis</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em><em>, </em><em>optional</em>) – .The dimension softmax would be performed on. Defaults to None.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – . This operator’s name(optional). Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>Blob</cite> has the same type and shape as logits.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>remote_blob_util.BlobDef</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>InvalidArgumentError</strong> – if logits is empty or axis is beyond the last dimension of logits.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.softmax_cross_entropy_with_logits">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">softmax_cross_entropy_with_logits</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">logits</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.softmax_cross_entropy_with_logits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes softmax cross entropy between logits and labels. Analogous to <a class="reference external" href="https://www.tensorflow.org/api_docs/python/tf/nn/softmax_cross_entropy_with_logits">tf.nn.softmax_cross_entropy_with_logits</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>labels</strong> (<em>remote_blob_util.BlobDef</em>) – Each vector along the class dimension should hold a valid probability distribution.</p></li>
+<li><p><strong>logits</strong> (<em>remote_blob_util.BlobDef</em>) – Per-label activations, typically a linear output. logits has same shape and dtype as labels.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This operator’s name(optional). Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>Blob</cite> that contains the softmax cross entropy loss. Its type is the same as logits and its shape is the same as labels except that it does not have the last dimension of labels.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>remote_blob_util.BlobDef</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.softmax_grad">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">softmax_grad</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">y</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">dy</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.softmax_grad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes gradient of softmax activations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y</strong> (<em>remote_blob_util.BlobDef</em>) – A <cite>Blob</cite> representing the softmax of x.</p></li>
+<li><p><strong>dy</strong> (<em>remote_blob_util.BlobDef</em>) – gradient of y.</p></li>
+<li><p><strong>axis</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em><em>, </em><em>optional</em>) – The dimension softmax would be performed on. Defaults to None.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This operator’s name(optional).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>Blob</cite> representing the gradient of x.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>remote_blob_util.BlobDef</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.sparse_cross_entropy">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">sparse_cross_entropy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">prediction</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.sparse_cross_entropy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computer sparse cross entropy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>labels</strong> (<em>remote_blob_util.BlobDef</em>) – A <cite>Blob</cite> of shape [d_0, d_1, …, d_{r-1}] (where r is rank of labels and result). Each entry in labels must be an index in [0, num_classes).</p></li>
+<li><p><strong>prediction</strong> (<em>remote_blob_util.BlobDef</em>) – A <cite>Blob</cite> with the rank that is equal to the rank of the labels plus one.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This operator’s name(optional). Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>Blob</cite> of the same shape as labels.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>remote_blob_util.BlobDef</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="oneflow.nn.sparse_softmax_cross_entropy_with_logits">
+<code class="sig-prename descclassname">oneflow.nn.</code><code class="sig-name descname">sparse_softmax_cross_entropy_with_logits</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">logits</span><span class="p">:</span> <span class="n">oneflow.python.framework.remote_blob.BlobDef</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; oneflow.python.framework.remote_blob.BlobDef<a class="headerlink" href="#oneflow.nn.sparse_softmax_cross_entropy_with_logits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes sparse softmax cross entropy between logits and labels. Analogous to <a class="reference external" href="https://www.tensorflow.org/api_docs/python/tf/nn/sparse_softmax_cross_entropy_with_logits">tf.nn.sparse_softmax_cross_entropy_with_logits</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>labels</strong> (<em>remote_blob_util.BlobDef</em>) – <cite>Blob</cite> of shape [d_0, d_1, …, d_{r-1}] (where r is rank of labels and result). Each entry in labels must be an index in [0, num_classes).</p></li>
+<li><p><strong>logits</strong> (<em>remote_blob_util.BlobDef</em>) – Unscaled log probabilities of shape [d_0, d_1, …, d_{r-1},num_classes].</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – This operator’s name(optional). Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If logits are scalars (need to have rank &gt;= 1) or if the rank of the labels is not equal to the rank of the logits minus one.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A <cite>Blob</cite> of the same shape as labels and of the same type as logits with the softmax cross entropy loss.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>remote_blob_util.BlobDef</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="layers.html" class="btn btn-neutral float-right" title="oneflow.layers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="math.html" class="btn btn-neutral float-left" title="oneflow.math" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, OneFlow
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
