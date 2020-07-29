@@ -2,4 +2,4 @@ Sphinx==2.2.0
 recommonmark==0.6.0
 sphinx_material==0.0.30
 sphinx_rtd_theme==0.5.0
-https://1fdevgroup06241201diag.blob.core.windows.net/develop/oneflow/oneflow-0.1.4-cp37-cp37m-linux_x86_64.whl
+https://1fdevgroup06241201diag.blob.core.windows.net/develop/oneflow/oneflow-0.1.5-cp37-cp37m-linux_x86_64.whl
